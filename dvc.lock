@@ -1,0 +1,23 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/data_ingestion.py
+    deps:
+    - path: params.yaml
+      hash: md5
+      md5: 0a05616871092257d1f3ddb6ec9c8f3d
+      size: 43
+    - path: src/data_ingestion.py
+      hash: md5
+      md5: 700abc469d50b81ecb79f78537ec7e43
+      size: 1496
+    params:
+      params.yaml:
+        s3_bucket: mj-cat-data
+        s3_prefix: dataset
+    outs:
+    - path: data/dataset
+      hash: md5
+      md5: dc286d9ab46033dda776777bae918111.dir
+      size: 1678027983
+      nfiles: 169

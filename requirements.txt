@@ -1,0 +1,8 @@
+boto3
+s3fs==2025.9.0
+tqdm
+PyYAML
+dvc[s3]
+rich==14.1.0
+loguru==0.7.3
+

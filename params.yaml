@@ -1,0 +1,3 @@
+s3_bucket: mj-cat-data
+s3_prefix: dataset
+
