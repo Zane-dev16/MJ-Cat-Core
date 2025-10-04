@@ -5,4 +5,5 @@ PyYAML
 dvc[s3]
 rich==14.1.0
 loguru==0.7.3
+scikit-learn==1.7.2
 

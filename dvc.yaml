@@ -11,4 +11,12 @@ stages:
     params:
       - s3_bucket
       - s3_prefix
+  split_dataset:
+    cmd: python src/split_dataset.py
+    deps:
+      - src/split_dataset.py
+      - data/dataset
+    outs:
+      - data/splits:
+          type: directory
 

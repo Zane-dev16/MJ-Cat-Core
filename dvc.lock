@@ -18,6 +18,24 @@ stages:
     outs:
     - path: data/dataset
       hash: md5
-      md5: dc286d9ab46033dda776777bae918111.dir
-      size: 1678027983
-      nfiles: 169
+      md5: 0b88f2ffa3b0b53e7d8484e0978ef5e2.dir
+      size: 1667086780
+      nfiles: 168
+  split_dataset:
+    cmd: python src/split_dataset.py
+    deps:
+    - path: data/dataset
+      hash: md5
+      md5: 0b88f2ffa3b0b53e7d8484e0978ef5e2.dir
+      size: 1667086780
+      nfiles: 168
+    - path: src/split_dataset.py
+      hash: md5
+      md5: 6408a7713e47bbefc54569adade95710
+      size: 1664
+    outs:
+    - path: data/splits
+      hash: md5
+      md5: 8e475e5714c6b17962ca640afe626027.dir
+      size: 1667086780
+      nfiles: 168
