@@ -39,3 +39,43 @@ stages:
       md5: 8e475e5714c6b17962ca640afe626027.dir
       size: 1667086780
       nfiles: 168
+  data_preprocessing:
+    cmd: python src/data_preprocessing.py
+    deps:
+    - path: data/splits
+      hash: md5
+      md5: 8e475e5714c6b17962ca640afe626027.dir
+      size: 1667086780
+      nfiles: 168
+    - path: src/data_preprocessing.py
+      hash: md5
+      md5: 7a7370e92ace7a4d5bbca1c763fdc1b4
+      size: 3521
+    outs:
+    - path: data/prepared
+      hash: md5
+      md5: 763d9b2b845bedf5f0be646ad01e00d6.dir
+      size: 7875768980
+      nfiles: 8929
+  data_embedding:
+    cmd: python src/data_embedding.py
+    deps:
+    - path: data/prepared
+      hash: md5
+      md5: 763d9b2b845bedf5f0be646ad01e00d6.dir
+      size: 7875768980
+      nfiles: 8929
+    - path: params.yaml
+      hash: md5
+      md5: 0a05616871092257d1f3ddb6ec9c8f3d
+      size: 43
+    - path: src/data_embedding.py
+      hash: md5
+      md5: d002bcaf79ea8b1a37e3ecc911865250
+      size: 2053
+    outs:
+    - path: data/embeddings
+      hash: md5
+      md5: d751713988987e9331980363e24189ce.dir
+      size: 0
+      nfiles: 0

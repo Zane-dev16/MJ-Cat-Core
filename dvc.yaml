@@ -19,4 +19,11 @@ stages:
     outs:
       - data/splits:
           type: directory
+  data_preprocessing:
+    cmd: python src/data_preprocessing.py
+    deps:
+      - data/splits
+      - src/data_preprocessing.py
+    outs:
+      - data/prepared
 
