@@ -1,1 +1,1 @@
-## MJ Cat
+## MJ Cat Training Repo
