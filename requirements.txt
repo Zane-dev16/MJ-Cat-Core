@@ -1,9 +1,19 @@
 boto3
 s3fs==2025.9.0
-tqdm
+tqdm==4.67.1
 PyYAML
 dvc[s3]
 rich==14.1.0
 loguru==0.7.3
 scikit-learn==1.7.2
+pydub==0.25.1
+numpy==2.3.3
+soundfile==0.13.1
+openl3==0.4.2
+tensorflow_hub==0.16.1
+mlflow==3.4.0
+dagshub==0.6.3
+librosa==0.11.0
+bentoml==1.4.25
+lightgbm==4.6.0
 

@@ -79,3 +79,25 @@ stages:
       md5: d751713988987e9331980363e24189ce.dir
       size: 0
       nfiles: 0
+  extract_embeddings:
+    cmd: python src/extract_embeddings.py
+    deps:
+    - path: data/prepared
+      hash: md5
+      md5: 763d9b2b845bedf5f0be646ad01e00d6.dir
+      size: 7875768980
+      nfiles: 8929
+    - path: params.yaml
+      hash: md5
+      md5: 0a05616871092257d1f3ddb6ec9c8f3d
+      size: 43
+    - path: src/extract_embeddings.py
+      hash: md5
+      md5: b89bafb0b02c01b3188d8fda8fa1a8f0
+      size: 3427
+    outs:
+    - path: data/embeddings
+      hash: md5
+      md5: 59915d939e8b8d984dcc1ddace6498ca.dir
+      size: 13787144
+      nfiles: 6

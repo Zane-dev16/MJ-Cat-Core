@@ -9,3 +9,4 @@ data/
 .env
 /data
 logs/
+vggish_lgbm_model.pkl

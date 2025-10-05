@@ -26,4 +26,12 @@ stages:
       - src/data_preprocessing.py
     outs:
       - data/prepared
-
+  extract_embeddings:
+    cmd: python src/extract_embeddings.py
+    deps:
+      - src/extract_embeddings.py
+      - data/prepared
+      - params.yaml
+    outs:
+      - data/embeddings:
+          type: directory
