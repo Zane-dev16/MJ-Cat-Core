@@ -9,7 +9,6 @@ scikit-learn==1.7.2
 pydub==0.25.1
 numpy==2.3.3
 soundfile==0.13.1
-openl3==0.4.2
 tensorflow_hub==0.16.1
 mlflow==3.4.0
 dagshub==0.6.3

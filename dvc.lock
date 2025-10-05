@@ -18,17 +18,17 @@ stages:
     outs:
     - path: data/dataset
       hash: md5
-      md5: 0b88f2ffa3b0b53e7d8484e0978ef5e2.dir
-      size: 1667086780
-      nfiles: 168
+      md5: 2bb2fb069433abcfae371dd8c1f9c7be.dir
+      size: 1667092928
+      nfiles: 169
   split_dataset:
     cmd: python src/split_dataset.py
     deps:
     - path: data/dataset
       hash: md5
-      md5: 0b88f2ffa3b0b53e7d8484e0978ef5e2.dir
-      size: 1667086780
-      nfiles: 168
+      md5: 2bb2fb069433abcfae371dd8c1f9c7be.dir
+      size: 1667092928
+      nfiles: 169
     - path: src/split_dataset.py
       hash: md5
       md5: 6408a7713e47bbefc54569adade95710
@@ -93,11 +93,33 @@ stages:
       size: 43
     - path: src/extract_embeddings.py
       hash: md5
-      md5: b89bafb0b02c01b3188d8fda8fa1a8f0
-      size: 3427
+      md5: 640393597134c37fdbc8c4ae03107232
+      size: 3630
     outs:
+    - path: bentoml_home/models/audio_preprocessor
+      hash: md5
+      md5: b296c246cb39ea79ba9b72575daaf90d.dir
+      size: 2499
+      nfiles: 3
+    - path: bentoml_home/models/vggish_model
+      hash: md5
+      md5: 7d8e64fb2d3477ced57a6a38967e9377.dir
+      size: 288728708
+      nfiles: 6
     - path: data/embeddings
       hash: md5
-      md5: 59915d939e8b8d984dcc1ddace6498ca.dir
+      md5: c6e62a92fd371e760d5d0a76412f4c6d.dir
       size: 13787144
       nfiles: 6
+  train_model:
+    cmd: python src/train_model.py
+    deps:
+    - path: data/embeddings
+      hash: md5
+      md5: c6e62a92fd371e760d5d0a76412f4c6d.dir
+      size: 13787144
+      nfiles: 6
+    - path: src/train_model.py
+      hash: md5
+      md5: 39f3e409ec193b92aa4e453a7d8332ba
+      size: 2581

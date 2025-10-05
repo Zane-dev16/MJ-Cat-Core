@@ -33,5 +33,12 @@ stages:
       - data/prepared
       - params.yaml
     outs:
+      - bentoml_home/models/audio_preprocessor
+      - bentoml_home/models/vggish_model
       - data/embeddings:
           type: directory
+  train_model:
+    cmd: python src/train_model.py
+    deps:
+      - src/train_model.py
+      - data/embeddings
